@@ -162,6 +162,12 @@ class JSONStorage(StorageInterface):
         if updates.metadata is not None:
             entry.metadata.update(updates.metadata)
             updated = True
+        if updates.context_items is not None:
+            entry.context_items = updates.context_items
+            updated = True
+        if updates.related_entries is not None:
+            entry.related_entries = updates.related_entries
+            updated = True
             
         if updated:
             entry.updated_at = datetime.now(timezone.utc) # Should use utc now

@@ -52,6 +52,8 @@ class EntryUpdate(BaseModel):
     status: Optional[EntryStatus] = None
     tags: Optional[List[str]] = None
     metadata: Optional[Dict] = None
+    context_items: Optional[List[ContextItem]] = None
+    related_entries: Optional[List[str]] = None
 
 class EntryFilter(BaseModel):
     type: Optional[EntryType] = None
