@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  workpad:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/data
+    environment:
+      - WORKPAD_DATA_PATH=/data
+      - WORKPAD_STORAGE_TYPE=json
+      - WORKPAD_LOG_LEVEL=INFO
+      - WORKPAD_CORS_ORIGINS=*
