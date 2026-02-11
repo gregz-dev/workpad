@@ -39,7 +39,7 @@ def main():
     # 2. Add Context
     print("\n2. Adding context...")
     ctx_payload = {
-        "type": "link",
+        "type": "url",
         "source": "api_client",
         "content": "http://example.com"
     }
